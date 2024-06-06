@@ -1,0 +1,14 @@
+def sort_word_alphabetically(word):
+    # Sort the letters of the word in normal alphabetical order
+    normal_order = ''.join(sorted(word))
+    
+    # Sort the letters of the word in reverse alphabetical order
+    reverse_order = ''.join(sorted(word, reverse=True))
+    
+    return normal_order, reverse_order
+
+# Example usage
+word = "alphabet"
+normal_order, reverse_order = sort_word_alphabetically(word)
+print(f"Normal alphabetical order: {normal_order}")
+print(f"Reverse alphabetical order: {reverse_order}")
