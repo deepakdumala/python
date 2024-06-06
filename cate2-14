@@ -1,0 +1,20 @@
+def remove_common_words(s1, s2):
+    # Split the sentences into words
+    words1 = set(s1.split())
+    words2 = set(s2.split())
+    
+    # Find common words
+    common_words = words1.intersection(words2)
+    
+    # Remove common words from both sentences
+    updated_s1 = ' '.join(word for word in s1.split() if word not in common_words)
+    updated_s2 = ' '.join(word for word in s2.split() if word not in common_words)
+    
+    return updated_s1, updated_s2
+
+# Example usage
+s1 = "The quick brown fox jumps over the lazy dog"
+s2 = "The lazy dog jumps over the quick brown fox"
+updated_s1, updated_s2 = remove_common_words(s1, s2)
+print("Sentence 1 after removing common words:", updated_s1)
+print("Sentence 2 after removing common words:", updated_s2)
