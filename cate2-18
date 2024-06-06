@@ -1,0 +1,18 @@
+def find_mirror_number_exists(num):
+    mirror_digits = {'0': '0', '1': '1', '6': '9', '8': '8', '9': '6'}
+    reversed_num = ''
+    
+    for digit in num:
+        if digit not in mirror_digits:
+            return False
+        reversed_num += mirror_digits[digit]
+    
+    return num == reversed_num[::-1]
+
+# Example usage
+num = "123"
+result = find_mirror_number_exists(num)
+if result:
+    print("A mirror number exists.")
+else:
+    print("No mirror number exists.")
