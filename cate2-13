@@ -1,0 +1,23 @@
+def modify_string(s):
+    # Calculate the frequency of each character in the string
+    frequency = {}
+    for char in s:
+        if char in frequency:
+            frequency[char] += 1
+        else:
+            frequency[char] = 1
+    
+    # Helper function to get the new character after applying the circular distance
+    def get_new_char(char, distance):
+        new_index = (ord(char) - ord('a') + distance) % 26
+        return chr(ord('a') + new_index)
+    
+    # Modify the string
+    modified_string = ''.join(get_new_char(char, frequency[char]) for char in s)
+    
+    return modified_string
+
+# Example usage
+s = "alphabet"
+modified_string = modify_string(s)
+print(f"Modified string: {modified_string}")
