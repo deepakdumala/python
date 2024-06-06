@@ -1,0 +1,32 @@
+def count_vowels_and_consonants(statement):
+    # Define the sets of vowels and consonants
+    vowels = "aeiouAEIOU"
+    consonants = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+    
+    # Initialize counters
+    vowel_count = 0
+    consonant_count = 0
+    
+    # Iterate over each character in the statement
+    for char in statement:
+        if char in vowels:
+            vowel_count += 1
+        elif char in consonants:
+            consonant_count += 1
+    
+    # Determine which is maximum
+    if vowel_count > consonant_count:
+        result = "Vowels are more than consonants."
+    elif consonant_count > vowel_count:
+        result = "Consonants are more than vowels."
+    else:
+        result = "The number of vowels and consonants are equal."
+    
+    return vowel_count, consonant_count, result
+
+# Test the function
+statement = "Hello, World! Welcome to the year 2024."
+vowel_count, consonant_count, result = count_vowels_and_consonants(statement)
+print(f"The number of vowels in the statement is: {vowel_count}")
+print(f"The number of consonants in the statement is: {consonant_count}")
+print(result)
