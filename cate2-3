@@ -1,0 +1,20 @@
+def find_matching_characters(str1, str2):
+    # Ensure both strings have the same length
+    if len(str1) != len(str2):
+        return "Strings must be of equal length for comparison."
+    
+    # Initialize a counter for matching characters
+    match_count = 0
+    
+    # Iterate over the characters in both strings simultaneously
+    for i in range(len(str1)):
+        if str1[i] == str2[i]:
+            match_count += 1
+    
+    return match_count
+
+# Test the function
+string1 = "hello"
+string2 = "hallo"
+num_matches = find_matching_characters(string1, string2)
+print(f"The number of matching characters at the same index is: {num_matches}")
