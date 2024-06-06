@@ -1,0 +1,20 @@
+def find_character_in_string(s, char):
+    # Initialize a variable to store the index
+    index = -1
+    
+    # Iterate through the string to find the character
+    for i in range(len(s)):
+        if s[i] == char:
+            index = i
+            break
+    
+    # Check if the character was found
+    if index != -1:
+        print(f"The character '{char}' is present at index {index}.")
+    else:
+        print(f"The character '{char}' is not present in the string.")
+
+# Example usage
+string = "Hello, world!"
+character = 'o'
+find_character_in_string(string, character)
