@@ -1,0 +1,11 @@
+def uppercase_unicode():
+    uppercase_unicode_values = {}
+    for letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+        uppercase_unicode_values[letter] = ord(letter)
+    return uppercase_unicode_values
+
+# Example usage
+uppercase_unicode_values = uppercase_unicode()
+print("Unicode values of uppercase letters:")
+for letter, unicode_value in uppercase_unicode_values.items():
+    print(f"{letter}: {unicode_value}")
