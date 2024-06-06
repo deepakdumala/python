@@ -1,0 +1,14 @@
+def count_sorted_vowel_strings(n):
+    # Initialize dp array with 1 for each vowel
+    dp = [1] * 5
+    
+    for _ in range(1, n):
+        for i in range(3, -1, -1):
+            dp[i] += dp[i + 1]
+    
+    return sum(dp)
+
+# Example usage
+n = 2
+result = count_sorted_vowel_strings(n)
+print(f"Number of strings of length {n} that consist only of vowels and are lexicographically sorted: {result}")
