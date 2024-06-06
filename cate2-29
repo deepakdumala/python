@@ -1,0 +1,12 @@
+def main_conversion(s1, s2):
+    conversion_table = str.maketrans("abcd", "bacd")
+    converted_s1 = s1.translate(conversion_table)
+    converted_s2 = s2.translate(conversion_table)
+    return converted_s1, converted_s2
+
+# Example usage
+s1 = "abcddcba"
+s2 = "dcbabacd"
+converted_s1, converted_s2 = main_conversion(s1, s2)
+print("Converted s1:", converted_s1)
+print("Converted s2:", converted_s2)
