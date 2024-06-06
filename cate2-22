@@ -1,0 +1,13 @@
+def delchar(s, c):
+    # Check if c has length other than 1
+    if len(c) != 1:
+        return s
+    
+    # Delete all occurrences of c in s
+    return s.replace(c, '')
+
+# Example usage
+s = "hello world"
+c = "l"
+result = delchar(s, c)
+print("Result:", result)
