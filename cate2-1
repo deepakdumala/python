@@ -1,0 +1,21 @@
+import string
+
+def count_special_characters(statement):
+    # Define the set of special characters
+    special_characters = string.punctuation
+    
+    # Initialize a counter
+    count = 0
+    
+    # Iterate over each character in the statement
+    for char in statement:
+        # Check if the character is in the special characters set
+        if char in special_characters:
+            count += 1
+            
+    return count
+
+# Test the function
+statement = "Hello, World! Welcome to the year 2024. @ChatGPT #Python"
+num_special_characters = count_special_characters(statement)
+print(f"The number of special characters in the statement is: {num_special_characters}")
